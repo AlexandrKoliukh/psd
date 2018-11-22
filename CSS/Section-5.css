@@ -1,0 +1,154 @@
+.section-5 .box-1{
+    grid-area: box1;
+}
+.section-5 .box-2{
+    grid-area: box2;
+}
+.section-5 .box-3{
+    grid-area: box3;
+}
+.section-5 .box-4{
+    grid-area: box4;
+}
+.section-5 .box-5{
+    grid-area: box5;
+}
+.section-5{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 20px;
+    grid-template-areas: 
+    ". box1 ."
+    ". box2 ."
+    "box3 box4 box5";
+    padding: 100px;
+    background-color: rgb(230,230,230);
+}
+@media (max-width: 800px){
+    .section-5{
+        grid-template-areas: 
+        ". box1 ."
+        ". box2 ."
+        ". box3 ."
+        ". box4 ."
+        ". box5 .";
+    }
+}
+.section-5 .box-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-5 .box-1 img{
+    height: 80px;
+    width: 80px;
+}  
+.section-5 .box-2{
+    text-align: center;
+}
+.section-5 .box-2 p:first-child{
+    text-transform: uppercase;
+    font-family: 'Abel', sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.section-5 .box-2 p:nth-child(2){
+    margin-top: 10px;
+    font-size: 50px;
+    font-family: 'Josefin Sans', sans-serif;
+}   
+.section-5 .box-2 p:nth-child(2) span{
+   color: #1ac28a;
+}
+.section-5 .deal{
+    border: 1px solid silver;
+    border-radius: 5px;
+    box-shadow: 5px 6px 5px silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Abel', sans-serif;
+    background-color: #fff;
+    margin-top: 40px;
+    min-width: 200px;
+}
+.section-5 .deal:hover{
+    transform: scale(1.1);
+    transition: .3s;
+}
+.section-5 .deal:not(:hover){
+    transform: scale(1);
+    transition: .3s;
+}
+.section-5 .deal span,.section-5 .deal p {
+    display: inline-block;
+}
+.section-5 .deal .price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.section-5 .deal .price span:not(:last-child){
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.section-5 .deal .price span div{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px solid rgba(240,240,240,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    background-color: #dfe4ea;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.section-5 .deal .price span:last-child{
+    color: silver;
+}
+.section-5 .deal p{
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+}
+.section-5 .deal p span{
+    font-weight: bold;
+}
+.section-5 .deal .get-started{
+    display: block;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 5px 40px;
+    margin: 5px;
+    color: #fff;
+    background-color: #1ac28a;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}.section-5 .deal p:last-child{
+    margin-bottom: 10px;
+}
+.section-5 .deal p:nth-last-child(2){
+    margin-top: 10px;
+}
+.section-5 .deal p:last-child,.section-5 .deal p:nth-last-child(2){
+    color: silver;
+    padding: 0;
+    font-size: 14px;
+}
+.section-5 .premium{
+    color: #fff;
+    background-color: #1ac28a;
+}
+.section-5 .premium .price span div{
+    background-color: #1ac28a;
+}
+.section-5 .premium .get-started{
+    background-color: #fff;
+    color: #1ac28a;
+    text-shadow: none;
+}

@@ -1,0 +1,183 @@
+.section-4 .box-1{
+    grid-area: box1;
+}
+.section-4 .box-2{
+    grid-area: box2;
+}
+.section-4 .box-3{
+    grid-area: box3;
+}
+.section-4 .box-4{
+    grid-area: box4;
+}
+.section-4 .box-5{
+    grid-area: box5;
+}
+.section-4 .box-6{
+    grid-area: box6;
+}
+.section-4 .box-7{
+    grid-area: box7;
+}
+.section-4 .box-8{
+    grid-area: box8;
+}
+.section-4 .box-9{
+    grid-area: box9;
+}
+.section-4 .box-10{
+    grid-area: box10;
+}
+.section-4 .box-11{
+    grid-area: box11;
+}
+.section-4{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 
+    ". box1 box1 ."
+    ". box2 box2."
+    ". box3 box3."
+    "box4 box5 box6 box7"
+    "box8 box9 box10 box11";
+}
+@media(max-width:600px){
+    .section-4{
+        grid-template-areas: 
+        ". box1 box1 ."
+        ". box2 box2."
+        ". box3 box3."
+        "box4 box4 box6 box6"
+        "box5 box5 box7 box7"
+        "box8 box8 box9 box9"
+        "box11 box11 box10 box10";
+    }
+}
+.section-4 .box-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-4 .box-1 img{
+    height: 80px;
+    width: 80px;
+}  
+.section-4 .box-2{
+    text-align: center;
+}
+.section-4 .box-2 p:first-child{
+    text-transform: uppercase;
+    font-family: 'Abel', sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.section-4 .box-2 p:nth-child(2){
+    margin-top: 10px;
+    font-size: 50px;
+    font-family: 'Josefin Sans', sans-serif;
+}   
+.section-4 .box-2 p:nth-child(2) span{
+   color: #1ac28a;
+}
+.section-4 form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.section-4 form span{
+    display: block;
+    padding: 10px;
+    background-color: #1ac28a;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+    margin: 5px;
+}
+.section-4 form span:hover{
+    cursor: pointer;
+    background-color: aquamarine;
+    transition: .8s;
+}
+.section-4 form .active{
+    background-color: black;
+}
+.section-4 form .active:hover{
+    background-color: black;
+}
+.section-4 .box-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.section-4 div[target="web_design"]{
+    transition: .8s;
+    opacity: 1;
+}
+.section-4 div[target="web_development"]{
+    transition: .8s;
+    opacity: 1;
+}
+.section-4 div[target]{
+    height: 200px;
+    background-color: #A3CB38;
+}
+.section-4 div[target]:nth-child(4), .section-4 div[target]:nth-child(7){
+    animation: a1 3s ease-in infinite alternate;
+}
+.section-4 div[target]:nth-child(6), .section-4 div[target]:nth-child(8){
+    animation: a3 3s ease-in  infinite alternate;
+}
+.section-4 div[target]:nth-child(9), .section-4 div[target]:nth-child(11){
+    animation: a2 3s ease-in  infinite alternate;
+}
+.section-4 div[target]:nth-child(5), .section-4 div[target]:nth-child(10){
+    animation: a4 3s ease-in  infinite alternate;
+}
+@keyframes a1{
+0%{
+    background-color: #A3CB38;
+}
+50%{
+    background-color: #006266;
+}
+100%{
+    background-color: #0652DD;
+}
+}
+@keyframes a2{
+0%{
+    background-color: #ffb142;
+}
+50%{
+    background-color: #ff793f;
+}
+100%{
+    background-color: #b33939;
+}
+}
+@keyframes a3{
+0%{
+    background-color: #7d5fff;
+}
+50%{
+    background-color: #17c0eb;
+}
+100%{
+    background-color: #fff200;
+}
+}
+@keyframes a4{
+0%{
+    background-color: #ced6e0;
+}
+50%{
+    background-color: #a4b0be;
+}
+100%{
+    background-color: #2f3542;
+}
+}

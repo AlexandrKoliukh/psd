@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* section-1 styles */
+#section-1{
+  visibility: hidden;
+}
+.section-1 .box1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: box1;
+}
+
+.section-1 .box2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: box2;
+}
+
+.section-1 .box3 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: box3;
+}
+
+.section-1 .box4 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: box4;
+}
+
+.section-1 .box5 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 5;
+  grid-area: box5;
+}
+
+@media (max-width: 500px) {
+  .section-1 .box1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .section-1 .box2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .section-1 .box3 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+  }
+  .section-1 .box4 {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+  }
+  .section-1 .box5 {
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+  }
+}
+
+.section-1 .main {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.5em;
+  grid-auto-rows: minmax(100px, auto);
+      -ms-grid-columns: 1fr 0.5em 1fr 0.5em 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto 0.5em auto 0.5em auto 0.5em auto;
+      grid-template-areas:
+    ". box1 ."
+    ". box2 ."
+    "box3 box4 box5"
+    "box3 box4 box5";
+  /* justify-content: center; */
+  margin: 50px 100px 0 100px;
+}
+@media (max-width: 500px) {
+  .section-1 .main {
+        grid-template-areas:
+      ". box1 ."
+      ". box2 ."
+      ". box3 ."
+      ". box3 ."
+      ". box4 ."
+      ". box4 ."
+      ". box5 ."
+      ". box5 .";
+  }
+}
+.section-1 .box1 {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas:
+    ". smile ."
+    ". smile2 .";
+}
+
+.section-1 .box1 .smile {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: smile;
+}
+.section-1 .box1 .smile-caption {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: smile2;
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.section-1 .box1 .smile img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+
+.section-1 .box2 {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 50px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.section-1 .box2 span {
+  color: #1ac28a;
+}
+
+.section-1 .icon img {
+  display: block;
+  margin: auto;
+}
+
+.section-1 .font {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 10px;
+}
+
+.section-1 .description {
+  font-style: italic;
+  text-align: center;
+}

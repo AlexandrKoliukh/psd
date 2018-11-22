@@ -1,0 +1,79 @@
+body{
+  background-color:rgb(245, 245,245);
+  overflow-x: hidden;
+}
+.section-0{
+  color: #fff;
+  margin: 0px;
+  background-color: #999;
+}
+.section-0 .head {
+  text-align: center;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(auto, auto));
+}
+.section-0 .description {
+  padding: 50px 2px 2px 2px;
+  font-size: 1em;
+  font-family: monospace;
+  font-weight: bolder;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.section-0 .title {
+  padding: 2px;
+  font-size: 2em;
+  font-family: Marker Felt;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.section-0 .content {
+  margin-top: 15px;
+  padding: 3px;
+  text-align: center;
+}
+.section-0 iframe{
+  margin: 35px 0;
+  border: 2px solid #1ac28a;
+  border-radius: 3px;
+}
+@media (max-width: 600px){
+  .section-0 iframe{
+    width: 300px;
+  }
+}
+.section-0 .content div:first-child {
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+.section-0 .content div {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-0 form input {
+  display: inline-block;
+  padding: 10px;
+  margin: 0px;
+  border: 1px solid silver;
+  border-radius: 3px;
+}
+
+.section-0 .button {
+  background-color: #1ac28a;
+  color: #fff;
+  padding: 10px 30px 10px 30px;
+  border: 1px solid #1ac28a;
+}
+.section-0 input:hover{
+  border-color: rgb(203, 5, 29);
+}
+
+hr{
+  margin: 100px 0;
+}

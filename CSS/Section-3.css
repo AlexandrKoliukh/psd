@@ -1,0 +1,191 @@
+hr{
+    visibility: hidden;
+}
+.section-3 .box-1{
+    grid-area: box1;
+}
+.section-3 .box-2{
+    grid-area: box2;
+}
+.section-3 .box-3{
+    grid-area: box3;
+}
+.section-3 .box-4{
+    grid-area: box4;
+}
+.section-3 .box-5{
+    grid-area: box5;
+}
+.section-3 .box-6{
+    grid-area: box6;
+}
+.section-3 .box-7{
+    grid-area: box7;
+}
+.section-3 .box-8{
+    grid-area: box8;
+}
+.section-3{
+    display: grid;
+    grid-gap: 1.2em;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: 
+    ". box1 ."
+    ". box2 ."
+    "box3 box4 box5"
+    "box6 box7 box8";
+    background-color: rgb(230,230,230);
+    padding: 100px;
+}
+@media (max-width: 670px){
+    .section-3{
+        grid-template-areas: 
+        ". box1 ."
+        ". box2 ."
+        ". box3 ."
+        ". box4 ."
+        ". box5 ."
+        ". box6 ."
+        ". box7 ."
+        ". box8 .";
+    }
+}
+.section-3 .box-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-3 .box-1 img{
+    height: 80px;
+    width: 80px;
+}  
+.section-3 .box-2{
+    text-align: center;
+}
+.section-3 .box-2 p:first-child{
+    text-transform: uppercase;
+    font-family: 'Abel', sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.section-3 .box-2 p:nth-child(2){
+    margin-top: 10px;
+    font-size: 50px;
+    font-family: 'Josefin Sans', sans-serif;
+}   
+.section-3 .box-2 p:nth-child(2) span{
+   color: #1ac28a;
+}
+.section-3 div:not(:first-child) img{
+    margin: 20px;
+    height: 80px;
+    width: 80px;
+}
+.section-3 .box-3,.section-3 .box-4, .section-3 .box-5, .section-3 .box-6,.section-3 .box-7,.section-3 .box-8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid silver;
+    background-color: #fff;
+    border-radius: 5px;
+    perspective: 1000px;
+    position: relative;
+}
+.section-3 .box-4 .front div:nth-child(2), .section-3 .box-5 .front div:nth-child(2), .section-3 .box-6 .front div:nth-child(2),.section-3 .box-7 .front div:nth-child(2),.section-3 .box-8 .front div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-3 .front,.section-3 .back {
+    transition: .8s;
+    backface-visibility: hidden;
+}
+.section-3 .front {
+    background-color: #fff;
+}
+.section-3 .back {
+    background-color: silver;
+    transform: rotateY(180deg);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
+    padding: 5px;
+}
+.section-3 .box-4:hover .front, .section-3 .box-5:hover .front, .section-3 .box-6:hover .front,.section-3 .box-7:hover .front,.section-3 .box-8:hover .front {
+    transform: rotateY(180deg);
+}
+.section-3 .box-4:hover .back, .section-3 .box-5:hover .back, .section-3 .box-6:hover .back,.section-3 .box-7:hover .back,.section-3 .box-8:hover .back {
+    transform: rotateY(360deg);
+}
+
+.section-3 .box-4:after, .section-3 .box-5:after, .section-3 .box-6:after,.section-3 .box-7:after,.section-3 .box-8:after{
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+    border-left: solid 2px;
+    border-right: solid 2px;
+    border-color: silver;
+    transition: 0.5s;
+    transform: scaleY(0);
+}
+.section-3 .box-4:before, .section-3 .box-5:before, .section-3 .box-6:before,.section-3 .box-7:before,.section-3 .box-8:before{
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+    border-color: silver;
+    transition: 0.5s;
+    transform: scaleX(0);
+}
+.section-3 .box-4:hover:before, .section-3 .box-5:hover:before, .section-3 .box-6:hover:before,.section-3 .box-7:hover:before,.section-3 .box-8:hover:before, 
+.section-3 .box-4:hover:after, .section-3 .box-5:hover:after, .section-3 .box-6:hover:after,.section-3 .box-7:hover:after,.section-3 .box-8:hover:after{
+  transform: scale(1);
+}
+.section-3 .box-3 div>p{
+    font-weight: bold;
+    font-size: 26px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.section-3 .box-3-table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid silver;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.section-3 .box-3-table div{
+    padding: 10px 5px;
+    font-family: sans-serif;
+    width: 100%;
+
+}
+.section-3 .box-3-table div:hover{
+    background-color: rgb(240, 240 ,240);
+    transition: .8s;
+    cursor: pointer;
+}
+
+.section-3 .box-3-table div:nth-child(2){
+    border-bottom: 1px solid silver;
+    border-top: 1px solid silver;
+}
+.section-3 .box-4 .front div:first-child, .section-3 .box-5 .front div:first-child, .section-3 .box-6 .front div:first-child,.section-3 .box-7 .front div:first-child, .section-3 .box-8 .front div:first-child{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+}
