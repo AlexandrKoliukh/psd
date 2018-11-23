@@ -5,9 +5,6 @@
           box-sizing: border-box;
 }
 /* section-1 styles */
-#section-1{
-  visibility: hidden;
-}
 .section-1 .box1 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;

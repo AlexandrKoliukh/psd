@@ -27,15 +27,6 @@ $(function () {
     }
   });
 });
-$(window).scroll(function () {
-  $('#section-1, #section-2').each(function () {
-    var imagePos = $(this).offset().top;
-    var topOfWindow = $(window).scrollTop();
-    if (imagePos < topOfWindow + 400) {
-      $(this).addClass("slideUp");
-    }
-  });
-});
 $('#section-4 form span').on('click', function () {
   $('#section-4 form span').removeClass('active');
   $(this).toggleClass('active');
